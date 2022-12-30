@@ -22,8 +22,8 @@ jobs:
       run: date
 
   job4:
-  name: depends
-  needs: [ubuntu, windows, macos]
-  runs-on: windows-latest
-  steps:
-    run: date
+    name: depends
+    needs: [ubuntu, windows, macos]
+    runs-on: windows-latest
+    steps:
+      run: date
