@@ -1,0 +1,29 @@
+name: main
+
+on: push
+
+jobs:
+  job1:
+    name: ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      run: date
+
+  job2:
+    name: windows
+    runs-on: windows-latest
+    steps:
+      run: date
+
+  job3:
+    name: macOS
+    runs-on: macos-latest
+    steps:
+      run: date
+
+  job4:
+  name: depends
+  needs: [ubuntu, windows, macos]
+  runs-on: windows-latest
+  steps:
+  run: date
